@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" width="960" height="280" role="img" aria-label="GonitKosh — গণিতকোষ Animated Repository Banner">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="55%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#0b100e" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#34d399" stroke-opacity="0.08" stroke-width="1" />
+    </pattern>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <style>
+      .float1 { animation: floatA 5s ease-in-out infinite; }
+      .float2 { animation: floatB 6.5s ease-in-out infinite; }
+      .float3 { animation: floatA 7s ease-in-out infinite reverse; }
+      .pulseRing { animation: pulse 3.4s ease-out infinite; transform-origin: 150px 140px; }
+      .spinOrbit { animation: spin 26s linear infinite; transform-origin: 150px 140px; }
+      .fadeSlide { animation: slideIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .dashFlow { stroke-dasharray: 8 8; animation: dash 18s linear infinite; }
+      @keyframes floatA {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes floatB {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(9px) rotate(6deg); }
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.92); opacity: 0.55; }
+        70% { transform: scale(1.22); opacity: 0; }
+        100% { transform: scale(1.25); opacity: 0; }
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -160; }
+      }
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(14px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="960" height="280" rx="22" fill="url(#bgGrad)" />
+  <rect width="960" height="280" rx="22" fill="url(#grid)" />
+  <rect x="1" y="1" width="958" height="278" rx="21" fill="none" stroke="#10b981" stroke-opacity="0.28" stroke-width="2" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="150" cy="140" r="110" fill="#10b981" opacity="0.14" filter="url(#glow)" />
+  <circle cx="820" cy="70" r="90" fill="#f59e0b" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Animated Wave Route Line -->
+  <path class="dashFlow" d="M 30 242 Q 220 205 420 238 T 930 220" fill="none" stroke="#fde68a" stroke-opacity="0.22" stroke-width="2" />
+
+  <!-- Left Emblem: Orbiting Ring + Pulsing Halo + Emerald Badge -->
+  <circle class="pulseRing" cx="150" cy="140" r="68" fill="none" stroke="#34d399" stroke-width="2" />
+  <circle class="spinOrbit" cx="150" cy="140" r="82" fill="none" stroke="#fde68a" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="6 10" />
+
+  <g class="float1">
+    <rect x="92" y="82" width="116" height="116" rx="28" fill="url(#badgeGrad)" stroke="url(#goldGrad)" stroke-width="2.5" />
+    <text x="150" y="160" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="800" fill="url(#goldGrad)">∑</text>
+  </g>
+
+  <!-- Floating Math Symbols -->
+  <text class="float2" x="765" y="76" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="700" fill="#34d399" opacity="0.45">+</text>
+  <text class="float3" x="855" y="112" font-family="'JetBrains Mono', monospace" font-size="32" font-weight="700" fill="#fbbf24" opacity="0.42">√</text>
+  <text class="float2" x="810" y="218" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="700" fill="#6ee7b7" opacity="0.40">÷</text>
+  <text class="float3" x="895" y="195" font-family="'JetBrains Mono', monospace" font-size="30" font-weight="700" fill="#fde68a" opacity="0.35">×</text>
+
+  <!-- Main Title & Tagline -->
+  <g class="fadeSlide">
+    <rect x="258" y="64" width="214" height="28" rx="8" fill="#064e3b" stroke="#f59e0b" stroke-opacity="0.45" stroke-width="1" />
+    <text x="365" y="83" text-anchor="middle" font-family="'Noto Sans Bengali', 'Hind Siliguri', system-ui, sans-serif" font-size="13" font-weight="600" fill="#fde68a">
+      বাংলা ম্যাথ লাইব্রেরি · C++20
+    </text>
+
+    <text x="258" y="148" font-family="'Noto Sans Bengali', 'Hind Siliguri', system-ui, sans-serif" font-size="52" font-weight="800" fill="#ecfdf5">
+      গণিতকোষ <tspan font-size="24" font-weight="600" fill="#6ee7b7">· GonitKosh</tspan>
+    </text>
+
+    <text x="258" y="186" font-family="'Noto Sans Bengali', 'Hind Siliguri', system-ui, sans-serif" font-size="19" font-weight="600" fill="#d6d3d1">
+      বাংলায় নাম, C++ এর শক্তি — ২৬টি ফাংশন ও ৮টি ৩ডি দ্বীপ।
+    </text>
+
+    <!-- Pill Badges -->
+    <g transform="translate(258, 208)">
+      <rect x="0" y="0" width="110" height="28" rx="14" fill="#065f46" stroke="#34d399" stroke-opacity="0.4" />
+      <text x="55" y="18" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#a7f3d0">jog(a, b)</text>
+
+      <rect x="122" y="0" width="124" height="28" rx="14" fill="#065f46" stroke="#34d399" stroke-opacity="0.4" />
+      <text x="184" y="18" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#a7f3d0">gosagu(a, b)</text>
+
+      <rect x="258" y="0" width="116" height="28" rx="14" fill="#78350f" fill-opacity="0.6" stroke="#fbbf24" stroke-opacity="0.45" />
+      <text x="316" y="18" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#fde68a">moulik(n)</text>
+    </g>
+  </g>
+</svg>
