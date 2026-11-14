@@ -1,66 +1,252 @@
 
+<!-- Project Banner -->
+<p align="center">
+  <img src="./gonitkosh_repo_banner.svg" alt="GonitKosh Repository Banner" width="100%" />
+</p>
 
-# গণিতকোষ (GonitKosh)
+<h1 align="center">গণিতকোষ (GonitKosh)</h1>
 
-An interactive, game-like web platform and C++20 math library with **Bangla function names**. Built with **Next.js 14** (static export) and **Tailwind CSS** — zero backend required.
+<p align="center">
+  <strong>Explore Mathematics. Learn Through Play. Code in Bangla.</strong>
+</p>
+
+<p align="center">
+  An interactive, game-like web platform and C++20 mathematics library
+  featuring Bangla function names.
+</p>
+
+<p align="center">
+  Built with Next.js 14, React, Tailwind CSS and C++20.
+  No backend required.
+</p>
 
 ---
 
-## Live Previews
+## 🚀 Live Previews
 
-| Island Quest (3D Archipelago) | All-in-One REPL Console |
-| :---: | :---: |
-|  |  |
+<table>
+  <tr>
+    <th align="center">🏝️ Island Quest (3D Archipelago)</th>
+    <th align="center">💻 All-in-One REPL Console</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./gonitkosh-islands.gif"
+           alt="GonitKosh Island Quest Preview"
+           width="100%" />
+    </td>
+    <td align="center">
+      <img src="./gonitkosh-console.gif"
+           alt="GonitKosh REPL Console Preview"
+           width="100%" />
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Features
+## ✨ Features
 
-- **Island Quest (`components/World.js`)**: Explore a 3D archipelago of 8 progressive math islands with your custom explorer avatar (`public/scholar.png`) and earn up to 24 stars (`0 mistakes = 3★`, `1–2 = 2★`, `3+ = 1★`).
-- **Function Lab (`components/Docs.js`)**: Test all **26 built-in Bangla math functions** (`jog`, `biyog`, `gun`, `bhag`, `gosagu`, `moulik`, and more) with live C++-style error reporting.
-- **All-in-One Console**: Run nested expressions like `borgo(jog(2, 3))` or list operations like `gorh({1, 2, 3})` in a live REPL, alongside a full cheat-sheet table.
-- **Practice Arena**: Solve 10 guided math challenges with hints and progress saved automatically in `localStorage`.
+### 🏝️ Island Quest — 3D Mathematics Adventure
 
----
+- Explore a 3D archipelago containing 8 progressive mathematics islands.
+- Customize your explorer avatar using `public/scholar.png`.
+- Solve mathematical challenges and earn up to 24 stars.
+- Star-based scoring system:
+  - `0 mistakes = 3★`
+  - `1–2 mistakes = 2★`
+  - `3+ mistakes = 1★`
 
-## Getting Started
+### 📚 Function Lab
 
-```bash
-npm install
-npm run dev        # Start dev server at http://localhost:3000
-npm run build      # Generate static export in ./out
+- Explore and test all 26 built-in Bangla mathematics functions.
+- Includes functions such as:
+  - `jog()` — Addition
+  - `biyog()` — Subtraction
+  - `gun()` — Multiplication
+  - `bhag()` — Division
+  - `gosagu()` — GCD
+  - `moulik()` — Prime number checking
+- Provides live C++-style error reporting.
+
+### 💻 All-in-One REPL Console
+
+- Execute mathematical expressions directly in the browser.
+- Supports nested function expressions.
+
+Example:
+
+```cpp
+borgo(jog(2, 3))
 ```
 
+- Supports list operations.
+
+Example:
+
+```cpp
+gorh({1, 2, 3})
+```
+
+- Includes a complete mathematical function cheat sheet.
+
+### 🎯 Practice Arena
+
+- Solve 10 guided mathematics challenges.
+- Get hints while solving problems.
+- Track your progress automatically.
+- Progress is saved using browser `localStorage`.
+
 ---
 
-## Project Structure
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Next.js 14 | React framework |
+| React | UI development |
+| JavaScript | Application logic |
+| Tailwind CSS | Styling |
+| C++20 | Mathematics library |
+| HTML5 | Web structure |
+| CSS3 | Animations and 3D styling |
+| LocalStorage | Progress persistence |
+
+---
+
+## 📂 Project Structure
 
 ```text
 gonitkosh-web/
+│
 ├── app/
-│   ├── globals.css          # Theme variables, 3D archipelago & animation styles
-│   ├── layout.js            # Root layout, Bangla + monospace fonts
-│   └── page.js              # Hero, 3D interactive cube, navigation
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js
+│
 ├── components/
-│   ├── World.js             # 3D Island Quest map & challenge modal
-│   ├── Docs.js              # Function Lab, REPL Console, Cheat-sheet & Practice
-│   └── Ic.js                # Icon & star rating helpers
+│   ├── World.js
+│   ├── Docs.js
+│   └── Ic.js
+│
 ├── lib/
-│   ├── gk.js                # JS port of cpp/gonitkosh.hpp (exact functions & errors)
-│   └── data.js              # 26 function docs, 8 island levels & practice problems
+│   ├── gk.js
+│   └── data.js
+│
 ├── cpp/
-│   ├── gonitkosh.hpp        # Original C++20 header library
-│   └── main.cpp             # C++ CLI/demo entry point
+│   ├── gonitkosh.hpp
+│   └── main.cpp
+│
 ├── public/
-│   └── scholar.png          # Custom explorer avatar
-├── gonitkosh-repo-banner.svg
+│   └── scholar.png
+│
+├── gonitkosh_repo_banner.svg
 ├── gonitkosh-islands.gif
-└── gonitkosh-console.gif
+├── gonitkosh-console.gif
+│
+├── .gitignore
+├── next.config.js
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── tailwind.config.js
+└── README.md
 ```
 
 ---
 
-## Notes
+## ⚙️ Getting Started
 
-- `lib/gk.js` mirrors `cpp/gonitkosh.hpp` so every calculation and exception matches the C++ library directly in the browser.
-- Edit `lib/data.js` to add new functions, islands, or practice problems.
+Follow these steps to run GonitKosh locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/joygoswaminiloy2023-droid/Gonitkosh.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd Gonitkosh
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:3000
+```
+
+### 5. Build for Production
+
+```bash
+npm run build
+```
+
+The static production export is generated in the `out/` directory.
+
+---
+
+## 📖 C++ Mathematics Library
+
+GonitKosh includes an original C++20 mathematics library.
+
+**Header file:**
+
+```cpp
+#include "gonitkosh.hpp"
+```
+
+The library provides Bangla-named mathematical functions with C++-style error handling.
+
+The JavaScript implementation in `lib/gk.js` mirrors the C++ library in `cpp/gonitkosh.hpp`.
+
+---
+
+## 📝 Notes
+
+- `lib/gk.js` mirrors `cpp/gonitkosh.hpp` so calculations and exceptions remain consistent between the JavaScript and C++ implementations.
+- Edit `lib/data.js` to add new functions, island levels, or practice problems.
+- The application does not require a backend server.
+- User practice progress is stored locally using browser `localStorage`.
+- The project supports static export through Next.js.
+
+---
+
+## 👨‍💻 Developer
+
+<p align="center">
+  <strong>Joy Goswami Niloy</strong>
+  <br />
+  Computer Science & Engineering
+</p>
+
+<p align="center">
+  <a href="https://github.com/joygoswaminiloy2023-droid">
+    GitHub Profile
+  </a>
+  &nbsp; • &nbsp;
+  <a href="https://github.com/joygoswaminiloy2023-droid/Gonitkosh">
+    Project Repository
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <strong>গণিত শিখুন, যুক্তি গড়ুন, প্রযুক্তিতে এগিয়ে যান!</strong>
+  <br />
+  <sub>Learn Mathematics. Build Logic. Move Forward with Technology.</sub>
+</p>
