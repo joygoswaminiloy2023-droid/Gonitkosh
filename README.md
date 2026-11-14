@@ -1,4 +1,4 @@
-
+[./gonitkosh-repo-banner.svg]
 
 # গণিতকোষ (GonitKosh)
 
@@ -10,7 +10,7 @@ An interactive, game-like web platform and C++20 math library with **Bangla func
 
 | Island Quest (3D Archipelago) | All-in-One REPL Console |
 | :---: | :---: |
-|  |  |
+| [./gonitkosh-islands.gif] | [./gonitkosh-console.gif] |
 
 ---
 
